@@ -1,0 +1,41 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html,body{color: #222328;}
+a{color: #222328; text-decoration: none;}
+img{max-width: 100%; display: block;}
+
+#layout{display: flex;align-items: flex-start;align-items: flex-start;width: 1000px;position: relative;}
+section h2{position: absolute;width: 0; height: 0; overflow: hidden; z-index: -1;}
+#sideMenu{width: 200px;}
+header {margin: 20px 0;}
+
+.mainMenu{position: relative;  background-color: rgb(59, 59, 216);text-align: center;}
+.mainMenu:hover{background-color: rgb(122, 16, 16);}
+.mainMenu > a{color: #fff;padding: 10px 0;display: block; font-size: 1.1rem; 
+    font-weight: 700;border-bottom: 1px solid navy;}
+.mainMenu:hover .subMenu{display: block; transition: 1s;z-index: 1;max-height: 200px;}
+.subMenu{left: 100%;position: absolute;top: 0;max-height: 0;overflow: hidden;
+    background-color: #e2f3ff;width: 100%;z-index: 1;}
+.subMenu a {display: block;padding: 7px 0;}
+.subMenu a:hover{background-color: #e98e0a;color: #fff;}
+
+#content{width: 800px;position: relative;}
+#slideArea #slide{max-width: none; position: relative;height: 350px;}
+#slideArea #slide a{position: absolute;transition: opacity 1s;}
+#slideArea #slide img{max-width: none;}
+
+main{display: flex;height: 200px;}
+
+main section{flex: 1; border: 1px solid;padding: 10px 0;}
+
+#tab nav{display: flex;align-items: flex-end;gap: 2px;border-bottom: 2px solid;}
+#tab nav button{border: 1px solid; border-bottom: 0; padding: 4px;border-radius: 8px 8px 0 0 ;}
+#tab nav button.active{padding: 8px; background-color: #ccc;}
+#notice{}
+#notice ul{list-style-position: inside;}
+#notice ul li{}
+#notice ul li span{float: right;}
+#gallery{display: none;}
+
+#banner a, #quick a{display: block;}
+#banner a img, #quick a img{display: block;margin: 0 auto;}
