@@ -14,7 +14,7 @@ header {margin: 20px 0;}
 .mainMenu > a{color: #fff;padding: 10px 0;display: block; font-size: 1.1rem; 
     font-weight: 700;border-bottom: 1px solid navy;}
 .mainMenu:hover .subMenu{display: block; transition: 1s;z-index: 1;max-height: 200px;}
-.subMenu{left: 100%;position: absolute;top: 0;max-height: 0;overflow: hidden;
+.subMenu{left: 100%;/* position: absolute;top: 0; */max-height: 0;overflow: hidden;
     background-color: #e2f3ff;width: 100%;z-index: 1;}
 .subMenu a {display: block;padding: 7px 0;}
 .subMenu a:hover{background-color: #e98e0a;color: #fff;}
@@ -26,7 +26,7 @@ header {margin: 20px 0;}
 
 main{display: flex;height: 200px;}
 
-main section{flex: 1; border: 1px solid;padding: 10px 0;}
+main section{flex: 1; padding: 10px 0;}
 
 #tab nav{display: flex;align-items: flex-end;gap: 2px;border-bottom: 2px solid;}
 #tab nav button{border: 1px solid; border-bottom: 0; padding: 4px;border-radius: 8px 8px 0 0 ;}
@@ -39,3 +39,13 @@ main section{flex: 1; border: 1px solid;padding: 10px 0;}
 
 #banner a, #quick a{display: block;}
 #banner a img, #quick a img{display: block;margin: 0 auto;}
+
+
+@media(max-width:500px){
+    #layout{flex-direction: column;width: 100%;}
+    #sideMenu{width: 100%;}
+    #content{width: 100%;}
+    #slideArea #slide{max-width: 100%;height: 0; width: 100%; padding-bottom: 47.5%;}
+    #slideArea #slide img{max-width: 100%;}
+    main{flex-direction: column;position: relative; height: initial;}
+}
